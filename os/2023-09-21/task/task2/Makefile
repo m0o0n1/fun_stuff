@@ -4,11 +4,12 @@ NAME=prog
 TYPE=
 
 help: 
-	@echo "This module can be compiled with the keys <noshared> and <build>\n"
-	@echo "The main difference between them is that the first one will search all the files and subdirs in current directory to find an .so file and load it at runtime\n"
-	@echo "The <build> option will build it in one directory and link at compilation time xd\n"
+	@echo "This module can be compiled with the keys <noshared> and <build>"
+	@echo "The main difference between them is that the first one will search all the files and subdirs in current directory to find an .so file and load it at runtime"
+	@echo "The <build> option will build it in one directory and link at compilation time xd"
 	@echo "The usage of program: ./prog.exe"
-	@echo "The input you need to store in s variable
+	@echo "The input you need to store in s variable"
+	@echo "make <[build | noshared | help]>"
 
 build: $(NAME).o libpushkin.so
 	$(CC) -o $(NAME).exe $(NAME).o -L. -lpushkin -Wl,-rpath,'.'
